@@ -43,7 +43,7 @@ class Student {
         }
         
         if (!grades.isEmpty) {
-            print("평점 : \(total / Double(grades.count))")
+            print("평점 : \(String(format: "%.2f", total / Double(grades.count)))")
         }
     }
 }
