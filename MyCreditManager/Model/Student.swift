@@ -9,7 +9,7 @@ import Foundation
 
 class Student {
     let name: String
-    var info: [String: String] = [:]
+    var grade: [String: String] = [:] // Subject, Credit
     
     init(_ name: String) {
         self.name = name
