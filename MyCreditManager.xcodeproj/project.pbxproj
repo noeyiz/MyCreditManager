@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9001E87629F2F094003F2DD9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001E87529F2F094003F2DD9 /* main.swift */; };
+		9001E87D29F55249003F2DD9 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001E87C29F55249003F2DD9 /* Student.swift */; };
+		9001E87F29F554B4003F2DD9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001E87E29F554B4003F2DD9 /* main.swift */; };
+		9001E88129F554C6003F2DD9 /* CreditManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001E88029F554C6003F2DD9 /* CreditManager.swift */; };
+		9001E88429F5587D003F2DD9 /* InputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001E88329F5587D003F2DD9 /* InputType.swift */; };
+		9001E88829F5670D003F2DD9 /* CreditType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9001E88729F5670D003F2DD9 /* CreditType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +28,11 @@
 
 /* Begin PBXFileReference section */
 		9001E87229F2F094003F2DD9 /* MyCreditManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyCreditManager; sourceTree = BUILT_PRODUCTS_DIR; };
-		9001E87529F2F094003F2DD9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9001E87C29F55249003F2DD9 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		9001E87E29F554B4003F2DD9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		9001E88029F554C6003F2DD9 /* CreditManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditManager.swift; sourceTree = "<group>"; };
+		9001E88329F5587D003F2DD9 /* InputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputType.swift; sourceTree = "<group>"; };
+		9001E88729F5670D003F2DD9 /* CreditType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,29 @@
 		9001E87429F2F094003F2DD9 /* MyCreditManager */ = {
 			isa = PBXGroup;
 			children = (
-				9001E87529F2F094003F2DD9 /* main.swift */,
+				9001E88A29F574D2003F2DD9 /* Enum */,
+				9001E88929F574CC003F2DD9 /* Model */,
+				9001E87E29F554B4003F2DD9 /* main.swift */,
 			);
 			path = MyCreditManager;
+			sourceTree = "<group>";
+		};
+		9001E88929F574CC003F2DD9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9001E87C29F55249003F2DD9 /* Student.swift */,
+				9001E88029F554C6003F2DD9 /* CreditManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9001E88A29F574D2003F2DD9 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9001E88329F5587D003F2DD9 /* InputType.swift */,
+				9001E88729F5670D003F2DD9 /* CreditType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9001E87629F2F094003F2DD9 /* main.swift in Sources */,
+				9001E88829F5670D003F2DD9 /* CreditType.swift in Sources */,
+				9001E88429F5587D003F2DD9 /* InputType.swift in Sources */,
+				9001E88129F554C6003F2DD9 /* CreditManager.swift in Sources */,
+				9001E87D29F55249003F2DD9 /* Student.swift in Sources */,
+				9001E87F29F554B4003F2DD9 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
