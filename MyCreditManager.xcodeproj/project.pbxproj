@@ -65,29 +65,29 @@
 		9001E87429F2F094003F2DD9 /* MyCreditManager */ = {
 			isa = PBXGroup;
 			children = (
-				9001E88A29F574D2003F2DD9 /* Enum */,
-				9001E88929F574CC003F2DD9 /* Model */,
+				9001E88A29F574D2003F2DD9 /* enum */,
+				9001E88929F574CC003F2DD9 /* model */,
 				9001E87E29F554B4003F2DD9 /* main.swift */,
 			);
 			path = MyCreditManager;
 			sourceTree = "<group>";
 		};
-		9001E88929F574CC003F2DD9 /* Model */ = {
+		9001E88929F574CC003F2DD9 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				9001E87C29F55249003F2DD9 /* Student.swift */,
 				9001E88029F554C6003F2DD9 /* CreditManager.swift */,
 			);
-			path = Model;
+			path = model;
 			sourceTree = "<group>";
 		};
-		9001E88A29F574D2003F2DD9 /* Enum */ = {
+		9001E88A29F574D2003F2DD9 /* enum */ = {
 			isa = PBXGroup;
 			children = (
 				9001E88329F5587D003F2DD9 /* InputType.swift */,
 				9001E88729F5670D003F2DD9 /* CreditType.swift */,
 			);
-			path = Enum;
+			path = enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
