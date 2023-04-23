@@ -52,7 +52,7 @@ class CreditManager {
         let subject = splitInput[1]
         let credit = splitInput[2]
         if checkExist(name) {
-            students[name]?.grade[subject] = credit.uppercased()
+            students[name]?.grade[subject] = CreditType(rawValue: credit.uppercased())
             print("\(name) 학생의 \(subject) 과목이 \(credit.uppercased())로 추가(변경)되었습니다.")
         }
     }
@@ -88,9 +88,9 @@ class CreditManager {
             } else {
                 var total = 0.0
                 
-                for (subject, score) in grade {
-                    print("\(subject): \(score)")
-                    total += CreditType(rawValue: score)?.toDouble ?? 0
+                for (subject, credit) in grade {
+                    print("\(subject): \(credit.rawValue)")
+                    total += credit.toDouble
                 }
                 print("평점 : \(String(format: "%.2f", total / Double(grade.count)))")
             }
