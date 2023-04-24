@@ -8,6 +8,7 @@
 import Foundation
 
 enum InputType {
+    
     case addStudent
     case deleteStudent
     case addGrade
@@ -28,4 +29,5 @@ enum InputType {
             return "평점을 알고싶은 학생의 이름을 입력해주세요."
         }
     }
+    
 }

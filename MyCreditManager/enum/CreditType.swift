@@ -8,6 +8,7 @@
 import Foundation
 
 enum CreditType: String {
+    
     case APlus = "A+"
     case A = "A"
     case BPlus = "B+"
@@ -31,4 +32,5 @@ enum CreditType: String {
         case .F: return 0
         }
     }
+    
 }
