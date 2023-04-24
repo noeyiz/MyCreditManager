@@ -9,7 +9,7 @@ import Foundation
 
 class CreditManager {
 
-    var students: [String: Student] = [:]
+    private var students: [String: Student] = [:]
     
     /// 학생 추가
     func addStudent() {
