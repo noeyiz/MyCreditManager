@@ -11,7 +11,7 @@ class CreditManager {
 
     private var students: [String: Student] = [:]
     
-    /// 학생 추가
+    // 학생 추가 메소드
     func addStudent() {
         guard let name = getInput(.addStudent) else { return }
         if checkValid(name) == false {
@@ -19,25 +19,25 @@ class CreditManager {
             return
         }
         
-        if students.contains(where: { $0.key == name }) {
+        if self.students.contains(where: { $0.key == name }) {
             print("\(name)은(는) 이미 존재하는 학생입니다. 추가하지 않습니다.")
         } else {
-            students[name] = Student(name)
+            self.students[name] = Student(name)
             print("\(name) 학생을 추가했습니다.")
         }
     }
     
-    /// 학생 삭제
+    // 학생 삭제 메소드
     func deleteStudent() {
         guard let name = getInput(.deleteStudent) else { return }
         
         if checkExist(name) {
-            students.removeValue(forKey: name)
+            self.students.removeValue(forKey: name)
             print("\(name) 학생을 삭제했습니다.")
         }
     }
     
-    /// 성적 추가/변경
+    // 성적 추가/변경 메소드
     func addGrade() {
         guard let input = getInput(.addGrade) else { return }
         
@@ -52,12 +52,12 @@ class CreditManager {
         let subject = splitInput[1]
         let credit = splitInput[2]
         if checkExist(name) {
-            students[name]?.grade[subject] = CreditType(rawValue: credit.uppercased())
+            self.students[name]?.grade[subject] = CreditType(rawValue: credit.uppercased())
             print("\(name) 학생의 \(subject) 과목이 \(credit.uppercased())로 추가(변경)되었습니다.")
         }
     }
     
-    /// 성적 삭제
+    // 성적 삭제 메소드
     func deleteGrade() {
         guard let input = getInput(.deleteGrade) else { return }
         
@@ -70,7 +70,7 @@ class CreditManager {
         let name = splitInput[0]
         let subject = splitInput[1]
         if checkExist(name) {
-            if (students[name]?.grade.removeValue(forKey: subject) != nil) {
+            if (self.students[name]?.grade.removeValue(forKey: subject) != nil) {
                 print("\(name) 학생의 \(subject) 과목의 성적이 삭제되었습니다.")
             } else {
                 print("\(name) 학생의 \(subject) 과목을 찾지 못했습니다.")
@@ -78,11 +78,11 @@ class CreditManager {
         }
     }
 
-    /// 평점 보기
+    // 평점 보기 메소드
     func printAverage() {
         guard let name = getInput(.printAverage) else { return }
         
-        if (checkExist(name)), let grade = students[name]?.grade {
+        if (checkExist(name)), let grade = self.students[name]?.grade {
             if (grade.isEmpty) {
                 print("성적이 존재하지 않는 학생입니다.")
             } else {
@@ -97,6 +97,7 @@ class CreditManager {
         }
     }
     
+    // InputType에 해당하는 메시지를 출력한 후 입력을 받는 메소드
     private func getInput(_ inputType: InputType) -> String? {
         print(inputType.toMessage)
         guard let input = readLine() else {
@@ -106,6 +107,7 @@ class CreditManager {
         return input
     }
     
+    // 문자열이 숫자 또는 영어인지 확인하는 메소드
     private func checkValid(_ str: String) -> Bool {
         if (str.contains(where: { !$0.isNumber && !$0.isUppercase && !$0.isLowercase })) {
             return false
@@ -114,8 +116,9 @@ class CreditManager {
         }
     }
     
+    // 학생 배열에 이름이 name인 학생이 있는지 확인하는 메소드
     private func checkExist(_ name: String) -> Bool {
-        if students.contains(where: { $0.key == name }) {
+        if self.students.contains(where: { $0.key == name }) {
             return true
         } else {
             print("\(name) 학생을 찾지 못했습니다.")
